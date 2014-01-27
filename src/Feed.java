@@ -1,4 +1,8 @@
-
+/**
+ * Class that represents a news feed as a list of news items
+ * @author CS1027
+ *
+ */
 public class Feed {
 	
 	public int readFrom (int start) {
@@ -11,6 +15,9 @@ public class Feed {
 		return size - 1;
 	}
 	
+	/** Find method which prints all the news items in the array list that contain pattern
+	 * @param pattern
+	 */
 	public void find (String pattern) {
 		
 		System.out.println ("name: " + this.name);
@@ -25,7 +32,7 @@ public class Feed {
 	}
 	
 	/**
-	 * add method adds a person to the list and uses the expandCapacity method
+	 * Add method adds a person to the list and uses the expandCapacity method
 	 * @param String 
 	 */
 	public void add (String item) {
@@ -42,8 +49,7 @@ public class Feed {
 	 * that creates a new array to store friends with twice the capacity
 	 * of the existing one
 	 */
-	 
-	private void expandCapacity () {
+	 private void expandCapacity () {
 		String [] largerList = new String[list.length * 2];
 		
 		for (int i = 0; i < list.length; i++)
@@ -53,7 +59,7 @@ public class Feed {
 	}
 	
 	/** 
-	 * Constructor creates Feed array of a certain size
+	 * Constructor creates Feed array of a specified size
 	 * @param name
 	 */
 	public Feed (String name) {
@@ -61,7 +67,10 @@ public class Feed {
 		this.name = name;
 		this.list = new String[DEFAULT_LIST_SIZE];
 	}
-		
+	
+	/**
+	 * Attribute declarations
+	 */
 	private String name;
 	private String[] list;
 	private int size;
